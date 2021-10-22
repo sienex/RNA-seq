@@ -23,7 +23,6 @@ STAR  --runMode genomeGenerate \
 --genomeDir Persea_genome \
 --runThreadN 12 \    
 --genomeFastaFiles hass_genome.fa haa.cds.fa haa.pep.fa \    
---sjdbGTFfile hass_geneannotation.gff \
 --sjdbOverhang 149
 ```
 ### 运行

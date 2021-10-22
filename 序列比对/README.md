@@ -19,7 +19,7 @@
 
 ### 建立索引
 ```
-STAR  --runMode genomeGenerate \
+STAR --runMode genomeGenerate \
 --genomeDir Persea_genome \
 --runThreadN 12 \    
 --genomeFastaFiles hass_genome.fa haa.cds.fa haa.pep.fa \    

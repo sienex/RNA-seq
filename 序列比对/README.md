@@ -24,6 +24,7 @@ STAR --runThreadN 12 --runMode genomeGenerate \
 --genomeFastaFiles /home/sienex/Desktop/Persea/00ref/Hass-ref-genome/hass_genome.fa /home/sienex/Desktop/Persea/00ref/Hass-ref-genome/haa.cds.fa /home/sienex/Desktop/Persea/00ref/Hass-ref-genome/haa.pep.fa \
 --sjdbGTFfile /home/sienex/Desktop/Persea/00ref/Hass-ref-genomehass_geneannotation.gtf \
 --sjdbOverhang 149 
+```
 --limitGenomeGenerateRAM 16106127360
 ```
 ### 运行

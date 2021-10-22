@@ -19,12 +19,12 @@
 
 ### 建立索引
 ```
-STAR --runThreadN 12--runMode genomeGenerate \
+STAR --runThreadN 12 --runMode genomeGenerate \
 --genomeDir Persea_genome \
---runThreadN 12 \   
---genomeFastaFiles /home/sienex/Desktop/Persea/00ref/hass_genome.fa \
-
---sjdbOverhang 149
+--genomeFastaFiles /home/sienex/Desktop/Persea/00ref/Hass-ref-genome/hass_genome.fa /home/sienex/Desktop/Persea/00ref/Hass-ref-genome/haa.cds.fa /home/sienex/Desktop/Persea/00ref/Hass-ref-genome/haa.pep.fa \
+--sjdbGTFfile /home/sienex/Desktop/Persea/00ref/Hass-ref-genomehass_geneannotation.gtf \
+--sjdbOverhang 149 
+--limitGenomeGenerateRAM 16106127360
 ```
 ### 运行
 STAR \

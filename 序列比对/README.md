@@ -19,10 +19,11 @@
 
 ### 建立索引
 ```
-STAR --runMode genomeGenerate \
+STAR --runThreadN 12--runMode genomeGenerate \
 --genomeDir Persea_genome \
---runThreadN 12 \    
---genomeFastaFiles hass_genome.fa haa.cds.fa haa.pep.fa \    
+--runThreadN 12 \   
+--genomeFastaFiles /home/sienex/Desktop/Persea/00ref/hass_genome.fa \
+
 --sjdbOverhang 149
 ```
 ### 运行

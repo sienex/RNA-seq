@@ -6,7 +6,9 @@
 ```fastqc sample*gz```
 
 #多线程后台处理   
-```ls *gz |xargs -I [] echo 'nohup fastqc [] -o /home/sienex/Desktop//01raw_data/fastqc &' > fastqc.sh```  
+```
+ls *gz | xargs -I [] echo 'nohup fastqc [] -o /home/sienex/Desktop/Persea/01raw_data/fastqc &' > fastqc.sh
+```  
 #运行```bash fastqc.sh```
 
 

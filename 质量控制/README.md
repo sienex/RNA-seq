@@ -69,4 +69,5 @@ fastp --thread 12 \
 --out2 /home/sienex/Desktop/Persea/02clean_data/HSXG-2_S6_L008_R2_001filter.fastq.gz \
 --html ./02clean_data/HSXG-2_S6_L008fastp.html \
 --json ./02clean_data/HSXG-2_S6_L008fastp.json \
+--thread 12
 ```

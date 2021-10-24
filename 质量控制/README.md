@@ -5,7 +5,7 @@
 #批量处理目录下所有gz，并生成zip文件  
 ```fastqc sample*gz```
 
-#多线程后台处理   
+#多线程后台处理 (在/home/sienex/Desktop/Persea/01raw_data下运行)  
 ```
 ls *gz | xargs -I [] echo 'nohup fastqc [] -o /home/sienex/Desktop/Persea/01raw_data/fastqc &' > fastqc.sh
 ```  

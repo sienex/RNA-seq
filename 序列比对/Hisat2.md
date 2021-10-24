@@ -2,7 +2,7 @@
 
 ### 构建索引
 ```
-hisat2-build -p12 /home/sienex/Desktop/Persea/00ref/Hass-ref-genome/hass_genome.fa /home/sienex/Desktop/Persea/00ref/hass_genome
+hisat2-build -p12 /home/sienex/Desktop/Persea/00ref/hass_genome.fa /home/sienex/Desktop/Persea/00ref/hass_genome
 ```
 
 ### 比对

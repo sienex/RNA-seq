@@ -14,4 +14,4 @@ hisat2 -p 12 -x /home/sienex/Desktop/Persea/00ref/hass_genome -1 /home/sienex/De
 samtools sort -@ 12 -o /home/sienex/Desktop/Persea/03align_out/hisat2/FETXG-1_S3_L008.bam /home/sienex/Desktop/Persea/03align_out/hisat2/FETXG-1_S3_L008.sam
 ```
 
--S /home/sienex/Desktop/Persea/03align_out/hisat2/FETXG-1_S3_L008.Log
+

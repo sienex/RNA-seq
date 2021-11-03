@@ -21,14 +21,14 @@ hisat2 -p 12 -x /home/sienex/Desktop/Persea/00ref/hass_genome -1 /home/sienex/De
 
 ### samtools
 ```
-samtools sort -@ 12 -o /home/sienex/Desktop/Persea/03align_out/hisat2/FETXG-1_S3_L008.bam /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/FETXG-1_S3_L008sorted.sam
+samtools sort -@ 12 -o /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/FETXG-1_S3_L008sorted.bam /home/sienex/Desktop/Persea/03align_out/hisat2/FETXG-1_S3_L008.sam
 ```
 ```
-samtools sort -@ 12 -o /home/sienex/Desktop/Persea/03align_out/hisat2/FETXG-2_S2_L008.sam /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/FETXG-2_S2_L008sorted.sam
+samtools sort -@ 12 -o /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/FETXG-2_S2_L008sorted.bam /home/sienex/Desktop/Persea/03align_out/hisat2/FETXG-2_S2_L008.sam
 ```
 ```
-samtools sort -@ 12 -o /home/sienex/Desktop/Persea/03align_out/hisat2/HSXG-1_S7_L008.sam /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/HSXG-1_S7_L008sorted.sam
+samtools sort -@ 12 -o /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/HSXG-1_S7_L008sorted.bam /home/sienex/Desktop/Persea/03align_out/hisat2/HSXG-1_S7_L008.sam
 ```
 ```
-samtools sort -@ 12 -o /home/sienex/Desktop/Persea/03align_out/hisat2/HSXG-2_S6_L008.sam /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/HSXG-2_S6_L008sorted.sam
+samtools sort -@ 12 -o /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/HSXG-2_S6_L008sorted.bam /home/sienex/Desktop/Persea/03align_out/hisat2/HSXG-2_S6_L008.sam
 ```

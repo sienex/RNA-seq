@@ -37,7 +37,8 @@
 --novel-splicesite-outfile ：在结果中生成一个剪接位点的列表
 
 --novel-splicesite-infile ： 可以使用novel-splicesite-outfile所生成的剪接列表作为
-                          ： 新剪接列表，应该可以自己定义。为特定基因。
+                          ： 新剪接列表，应该可以自己定义。为特定基因。  
+                        
 ```
 hisat2-build -p12 /home/sienex/Desktop/Persea/00ref/hass_genome.fa /home/sienex/Desktop/Persea/00ref/hass_genome
 ```

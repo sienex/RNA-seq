@@ -36,6 +36,8 @@ fastp --in1 /home/sienex/Desktop/Persea/01raw_data/FETXG-1_S3_L008_R1_001.fastq.
 --in2 /home/sienex/Desktop/Persea/01raw_data/FETXG-1_S3_L008_R2_001.fastq.gz \
 --out1 /home/sienex/Desktop/Persea/02clean_data/FETXG-1_S3_L008_R1_001filter.fastq.gz \
 --out2 /home/sienex/Desktop/Persea/02clean_data/FETXG-1_S3_L008_R2_001filter.fastq.gz \
+-f 15 \
+-F 15 \
 --html ./02clean_data/FETXG-1_S3_L008fastp.html \
 --json ./02clean_data/FETXG-1_S3_L008fastp.json \
 --thread 12
@@ -46,6 +48,8 @@ fastp --in1 /home/sienex/Desktop/Persea/01raw_data/FETXG-2_S2_L008_R1_001.fastq.
 --in2 /home/sienex/Desktop/Persea/01raw_data/FETXG-2_S2_L008_R2_001.fastq.gz \
 --out1 /home/sienex/Desktop/Persea/02clean_data/FETXG-2_S2_L008_R1_001filter.fastq.gz \
 --out2 /home/sienex/Desktop/Persea/02clean_data/FETXG-2_S2_L008_R2_001filter.fastq.gz \
+-f 15 \
+-F 15 \
 --html ./02clean_data/FETXG-2_S2_L008fastp.html \
 --json ./02clean_data/FETXG-2_S2_L008fastp.json \
 --thread 12
@@ -56,6 +60,8 @@ fastp --in1 /home/sienex/Desktop/Persea/01raw_data/HSXG-1_S7_L008_R1_001.fastq.g
 --in2 /home/sienex/Desktop/Persea/01raw_data/HSXG-1_S7_L008_R2_001.fastq.gz \
 --out1 /home/sienex/Desktop/Persea/02clean_data/HSXG-1_S7_L008_R1_001filter.fastq.gz \
 --out2 /home/sienex/Desktop/Persea/02clean_data/HSXG-1_S7_L008_R2_001filter.fastq.gz \
+-f 15 \
+-F 15 \
 --html ./02clean_data/HSXG-1_S7_L008fastp.html \
 --json ./02clean_data/HSXG-1_S7_L008fastp.json \
 --thread 12
@@ -66,6 +72,8 @@ fastp --in1 /home/sienex/Desktop/Persea/01raw_data/HSXG-2_S6_L008_R1_001.fastq.g
 --in2 /home/sienex/Desktop/Persea/01raw_data/HSXG-2_S6_L008_R2_001.fastq.gz \
 --out1 /home/sienex/Desktop/Persea/02clean_data/HSXG-2_S6_L008_R1_001filter.fastq.gz \
 --out2 /home/sienex/Desktop/Persea/02clean_data/HSXG-2_S6_L008_R2_001filter.fastq.gz \
+-f 15 \
+-F 15 \
 --html ./02clean_data/HSXG-2_S6_L008fastp.html \
 --json ./02clean_data/HSXG-2_S6_L008fastp.json \
 --thread 12

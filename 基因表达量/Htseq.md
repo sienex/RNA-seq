@@ -8,6 +8,6 @@
 ### gff转gtf
 library(rtracklayer)\
 test <- import("hass_geneannotation.gff")\
-export(test," hass_geneannotation.gtf","gtf")\
+export(test," hass_geneannotation.gtf","gtf")
 
 ### Htseq

@@ -40,3 +40,21 @@ htseq-count -f bam \
 -m union /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/FETXG-2_S2_L008sorted.bam \
 /home/sienex/Desktop/Persea/00ref/hass_geneannotation.gtf > /home/sienex/Desktop/Persea/04read_counts/FETXG-2_S2_L008_counts.txt
 ```
+```
+htseq-count -f bam \
+-r name \
+-s no -a 10 \
+-t exon \
+-i ID \
+-m union /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/HSXG-1_S7_L008sorted.bam \
+/home/sienex/Desktop/Persea/00ref/hass_geneannotation.gtf > /home/sienex/Desktop/Persea/04read_counts/HSXG-1_S7_L008_counts.txt
+```
+```
+htseq-count -f bam \
+-r name \
+-s no -a 10 \
+-t exon \
+-i ID \
+-m union /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/HSXG-2_S6_L008sorted.bam \
+/home/sienex/Desktop/Persea/00ref/hass_geneannotation.gtf > /home/sienex/Desktop/Persea/04read_counts/HSXG-2_S6_L008_counts.txt
+```

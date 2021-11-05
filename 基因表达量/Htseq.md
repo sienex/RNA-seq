@@ -65,9 +65,6 @@ HTSeq-count输出结果是一个个独立的文件，后续分析需要把多个
 
 在/home/sienex/Desktop/Persea/04read_counts下```vim read_counts.py```  
 ```
-python read_counts.py
-```
-```
 import sys
 import os
 mydict = {}
@@ -90,4 +87,7 @@ for file in sys.argv[1:]:
                         mydict[key] = value
 for key, value in mydict.items():
         print(key + '\t' + value )
+```  
+```
+python read_counts.py
 ```

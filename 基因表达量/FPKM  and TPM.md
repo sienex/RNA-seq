@@ -12,6 +12,9 @@ exonic.gene.sizes <- lapply(exons.list.per.gene,
                            function(x){sum(width(reduce(x)))})
 ```
 ### 
+
+rbind： 根据行进行纵向合并，就是行的叠加，m行的矩阵与n行的矩阵rbind()最后变成m+n行，合并前提：rbind(a, b)中矩阵a、b的列数必需相符
+lapply函数：对列表、数据框数据集进行循环，输入为列表，返回值为列表
 ```
 gene_length2 <- do.call(rbind,lapply(exonic.gene.sizes, data.frame))
 write.csv(gene_length2, "gene_length_2.csv", row.names = TRUE)

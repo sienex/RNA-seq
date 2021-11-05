@@ -68,7 +68,7 @@ HTSeq-count输出结果是一个个独立的文件，后续分析需要把多个
 import sys
 import os
 mydict = {}
-print(‘gene’+’\t’)
+print('gene'+'\t')
 
 filename=os.listdir(".")
 name=[]
@@ -76,7 +76,7 @@ for i in filename:
     portion = os.path.splitext(i)   #把文件名拆分为名字和后缀
     if portion[1] == ".txt":
         name.append(portion[0])
-print(name[0]+’\t’+name[1] +’\t’+name[2] +’\t’+name[3])
+print(name[0]+'\t'+name[1]+'\t'+name[2]+'\t'+name[3])
 
 for file in sys.argv[1:]:
         for line in open(file,'r'):

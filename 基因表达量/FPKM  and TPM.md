@@ -25,3 +25,22 @@ write.csv(gene_length, "gene_length.csv", row.names = TRUE)
 rt <- read.table("read_counts.txt", row.names = 1, header = TRUE, sep="\t")
 str(rt)
 ```
+
+```
+eff_length <- read.csv("gene_length.csv", row.names = 1, header = T)
+rownames(eff_length)<-eff_length$gene 
+rownames(eff_length) <- do.call(rbind,strsplit(as.character(eff_length$gene),'\\.'))[,1]
+eff_length[1:3,]
+```
+
+gen <- intersect(rownames(rt), rownames(eff_length))
+rt <- rt[gen,]
+eff_length <- eff_length[gen, ]
+
+countToFpkm <- function(counts, effLen){
+  N <- sum(counts)
+  exp( log(counts) + log(1e9) - log(effLen) - log(N) )
+}
+##count转换为FPKM值
+fpkms <- as.data.frame(apply(rt,2,countToFpkm,effLen = eff_length$eff_length))
+write.table(fpkms, "~/R/Hass-ref-genome/data_fpkms.txt", sep="\t", quote=F, row.names=T)

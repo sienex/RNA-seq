@@ -22,6 +22,6 @@ write.csv(gene_length, "gene_length.csv", row.names = TRUE)
 
 ### 对read_counts进行转换
 ```
-rt <- read.table("data_count.txt", row.names = 1, header = TRUE, sep="\t")
+rt <- read.table("read_counts.txt", row.names = 1, header = TRUE, sep="\t")
 str(rt)
 ```

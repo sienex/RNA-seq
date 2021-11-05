@@ -58,3 +58,36 @@ htseq-count -f bam \
 -m union /home/sienex/Desktop/Persea/03align_out/hisat2/sorted/HSXG-2_S6_L008sorted.bam \
 /home/sienex/Desktop/Persea/00ref/hass_geneannotation.gtf > /home/sienex/Desktop/Persea/04read_counts/HSXG-2_S6_L008_counts.txt
 ```
+
+
+### 合并多个read_counts
+HTSeq-count输出结果是一个个独立的文件，后续分析需要把多个文件合并成一个行为基因名，列为样本名，中间为count的行列式文件。
+
+在/home/sienex/Desktop/Persea/04read_counts下```vim read_counts.py```  
+```
+python read_counts.py
+```
+```
+import sys
+import os
+mydict = {}
+print(‘gene’+’\t’)
+
+filename=os.listdir(".")
+name=[]
+for i in filename:
+    portion = os.path.splitext(i)   #把文件名拆分为名字和后缀
+    if portion[1] == ".txt":
+        name.append(portion[0])
+print(name[0]+’\t’+name[1] +’\t’+name[2] +’\t’+name[3])
+
+for file in sys.argv[1:]:
+        for line in open(file,'r'):
+                key, value = line.strip().split('\t')
+                if(key in mydict.keys()):
+                        mydict[key] = mydict[key] + '\t' + value
+                else:
+                        mydict[key] = value
+for key, value in mydict.items():
+        print(key + '\t' + value )
+```

@@ -89,5 +89,5 @@ for key, value in mydict.items():
         print(key + '\t' + value )
 ```  
 ```
-python read_counts.py
+python read_counts.py FETXG-1_S3_L008_counts.txt FETXG-2_S2_L008_counts.txt HSXG-1_S7_L008_counts.txt HSXG-2_S6_L008_counts.txt >  /home/sienex/Desktop/Persea/04read_counts/read_counts/read_counts.txt
 ```

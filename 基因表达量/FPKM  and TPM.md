@@ -2,6 +2,7 @@
 
 ### 读取gtf文件，并通过exonBy()函数提取基因的外显子信息  
 ```
+library(GenomicFeatures)
 txdb <- makeTxDbFromGFF("hass_geneannotation.gtf",format="gtf")
 exons.list.per.gene <- exonsBy(txdb, by = "gene")
 ```
@@ -17,4 +18,10 @@ lapply函数：对列表、数据框数据集进行循环，输入为列表，�
 ```
 gene_length <- do.call(rbind,lapply(exonic.gene.sizes, data.frame))
 write.csv(gene_length, "gene_length.csv", row.names = TRUE)
+```
+
+### 对read_counts进行转换
+```
+rt <- read.table("data_count.txt", row.names = 1, header = TRUE, sep="\t")
+str(rt)
 ```

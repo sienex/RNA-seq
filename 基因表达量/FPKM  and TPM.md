@@ -12,6 +12,7 @@ txdb <- makeTxDbFromGFF("~/R/Hass-ref-genome/hass_geneannotation.gff",format="gf
 exons_gene <- exonsBy(txdb,by="gene")
 exons_gene_lens <- lapply(exons_gene, function(x){sum(width(reduce(x)))})
 ```
+```
 class(exons_gene_lens)
 
 exons_gene_lens1 <- as.data.frame(exons_gene_lens)

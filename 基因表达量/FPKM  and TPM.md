@@ -5,14 +5,13 @@
 ```
 library(GenomicFeatures)
 txdb <- makeTxDbFromGFF("~/R/Hass-ref-genome/hass_geneannotation.gff",format="gff")
-```
-### 同时，我们进一步可以通过reduce()函数来避免重复计算重叠区
-### lapply函数：对列表、数据框数据集进行循环，输入为列表，返回值为列表
-```
+#同时，我们进一步可以通过reduce()函数来避免重复计算重叠区
+#lapply函数：对列表、数据框数据集进行循环，输入为列表，返回值为列表
+
 exons_gene <- exonsBy(txdb,by="gene")
 exons_gene_lens <- lapply(exons_gene, function(x){sum(width(reduce(x)))})
-```
-```
+
+
 class(exons_gene_lens)
 
 exons_gene_lens1 <- as.data.frame(exons_gene_lens)

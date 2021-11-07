@@ -1,32 +1,17 @@
 ## FPKM
 
-### 读取gtf文件，并通过exonBy()函数提取基因的外显子信息  
-```
-library(GenomicFeatures)
-txdb <- makeTxDbFromGFF("hass_geneannotation.gtf",format="gtf")
-exons.list.per.gene <- exonsBy(txdb, by = "gene")
-```
 
-### 同时，我们进一步可以通过reduce()函数来避免重复计算重叠区
-```
-exonic.gene.sizes <- lapply(exons.list.per.gene,function(x){sum(width(reduce(x)))})
-```
-### 
-
-rbind： 根据行进行纵向合并，就是行的叠加，m行的矩阵与n行的矩阵rbind()最后变成m+n行，合并前提：rbind(a, b)中矩阵a、b的列数必需相符  
-lapply函数：对列表、数据框数据集进行循环，输入为列表，返回值为列表
-```
-gene_length <- do.call(rbind,lapply(exonic.gene.sizes, data.frame))
-write.csv(gene_length, "gene_length.csv", row.names = TRUE)
-```
-### 
+### 读取gff文件，并通过exonBy()函数提取基因的外显子信息  
 ```
 library(GenomicFeatures)
 txdb <- makeTxDbFromGFF("~/R/Hass-ref-genome/hass_geneannotation.gff",format="gff")
-
+```
+### 同时，我们进一步可以通过reduce()函数来避免重复计算重叠区
+### lapply函数：对列表、数据框数据集进行循环，输入为列表，返回值为列表
+```
 exons_gene <- exonsBy(txdb,by="gene")
 exons_gene_lens <- lapply(exons_gene, function(x){sum(width(reduce(x)))})
-
+```
 class(exons_gene_lens)
 
 exons_gene_lens1 <- as.data.frame(exons_gene_lens)

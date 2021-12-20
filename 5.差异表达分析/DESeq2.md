@@ -23,6 +23,7 @@ colnames(mycounts_1)==myindex$id
 
 BiocManager::install("DESeq2")
 
+library("DESeq2")
 dds <- DESeqDataSetFromMatrix(countData = mycounts_1,
                               colData = myindex,
                               design = ~index)

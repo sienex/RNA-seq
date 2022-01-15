@@ -16,6 +16,10 @@ conda install samtools
 2.导入重要channel:
 ```
 conda config --add channels conda-forge           //conda-forg是可以安装软件包的附加渠道。
+```
+```
 conda config --add channels r
+```
+```
 conda config --add channels bioconda
 ```

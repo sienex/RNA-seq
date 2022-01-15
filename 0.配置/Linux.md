@@ -4,8 +4,10 @@ wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py39_4.1
 ```  
 
 ```
-~/.bashrc
-export PATH=”/root/miniconda3/bin:$PATH”
+vi ~/.bashrc
+```
+```
+export PATH="/root/miniconda3/bin:$PATH"
 ```
 
 

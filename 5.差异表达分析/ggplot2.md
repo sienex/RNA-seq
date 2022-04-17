@@ -16,6 +16,7 @@ df$pvalue_log10<-(-log10(df$pvalue))
 df1<-df[df$pvalue_log10>=50,]
 dim(df1)
 
+#加标签
 ggplot(df,aes(x=log2FoldChange,y=-log10(pvalue)))+geom_point(aes(color=group))+
   scale_color_manual(values = c("dodgerblue" , "gray" , "firebrick"))+
   geom_label_repel(data=df1,aes(x=log2FoldChange,y=-log10(pvalue),label=X),
@@ -28,5 +29,10 @@ ggplot(df,aes(x=log2FoldChange,y=-log10(pvalue)))+geom_point(aes(color=group))+
                   
   )+
   theme_bw()+labs(x="log2(FoldChange)")
+  
+  
+  #不加标签
+  ggplot(df,aes(x=log2FoldChange,y=-log10(pvalue)))+geom_point(aes(color=group))+
+  scale_color_manual(values = c("dodgerblue" , "gray" , "firebrick")))+theme_bw()+labs(x="log2(FoldChange)")
 
 ```

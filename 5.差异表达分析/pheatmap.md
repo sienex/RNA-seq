@@ -4,7 +4,7 @@ install.packages("pheatmap")
 library(pheatmap)
 
 
-df2 <- read.csv("pheatmap_gene_2.csv",header = T,row.names = 1)
+df2 <- read.csv("差异基因.csv",header = T,row.names = 1)
 head(df2)
 df2 <- df2[rowSums(df2)!=0,]
 

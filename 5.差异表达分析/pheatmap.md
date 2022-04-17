@@ -19,7 +19,6 @@ df3<-as.matrix(df2)
 
 df3[df3==0] <- NA
 df3[is.na(df3)] <- min(df3,na.rm = T)*0.01
-pheatmap(log2(df3))
+pheatmap(log2(df3+1),scale = "row")
 
-pheatmap(df3,scale = "row")
 ```

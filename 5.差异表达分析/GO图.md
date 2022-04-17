@@ -4,7 +4,7 @@
 ######################################
 
 
-
+```
 dat = read.table("GO.txt",header = T,sep = "\t")
 library(ggplot2)#没有自己安装 install.package("ggplot2")
 p <- ggplot(dat,aes(y=GeneRatio,x=Term,fill=P_value)) + 
@@ -25,3 +25,4 @@ p
 ggsave(p,filename = "GO.pdf",limitsize = FALSE,width =30,height = 18,dpi=100)
 ggsave(p,filename = "GO.jpg",limitsize = FALSE,width = 30,height = 18,dpi=500)
 
+```
